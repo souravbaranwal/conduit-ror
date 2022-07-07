@@ -2,7 +2,7 @@
 
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
-    render status: :ok, json: { posts: @posts }
+    posts = Post.all
+    render status: :ok, json: { posts: posts }
   end
 end

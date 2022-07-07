@@ -7,9 +7,9 @@ const NavItem = ({ iconClass, name, path }) => (
     to={path}
     className="mr-3 inline-flex items-center px-1 pt-1
       text-sm font-semibold leading-5
-      text-indigo-500 hover:text-indigo-500"
+      text-orange-400 hover:text-orange-500"
   >
-    {iconClass && <i className={`${iconClass} text-bb-purple`}></i>}
+    {iconClass && <i className={`${iconClass} text-bb-orange`}></i>}
     {name}
   </Link>
 );
