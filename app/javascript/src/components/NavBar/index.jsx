@@ -19,18 +19,17 @@ const NavBar = () => (
           <span
             className="font-regular transition focus:outline-none inline-flex items-center
               border-b-2 border-transparent px-2 pt-1
-              text-sm leading-5 text-bb-gray-600 text-opacity-50
+              text-sm font-semibold leading-5  text-gray-700
               duration-150 ease-in-out
-              focus:text-bb-gray-700"
+              hover:text-orange-500 focus:text-orange-500"
           >
             Sourav
           </span>
           <a
             className="transition focus:outline-none inline-flex cursor-pointer items-center
               border-b-2 border-transparent px-1 pt-1
-              text-sm font-semibold leading-5 text-bb-gray-600
-              text-opacity-50 duration-150 ease-in-out
-              hover:text-bb-gray-600 focus:text-bb-gray-700"
+              text-sm font-semibold leading-5
+            text-gray-700 hover:text-orange-500"
           >
             LogOut
           </a>

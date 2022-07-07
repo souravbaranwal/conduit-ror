@@ -2,25 +2,24 @@ import React from "react";
 
 const Post = ({ post }) => (
   <div className="mb-5 flex items-center justify-center">
-    <div className="border w-9/12 rounded-xl bg-white p-5 shadow-md">
+    <div className="border w-9/12 rounded-xl bg-white p-5 shadow-md hover:bg-orange-100">
       <div className="border-b flex w-full items-center justify-between pb-3">
         <div className="flex items-center space-x-3">
-          <div className="bg-slate-400 h-8 w-8 rounded-full bg-[url('https://i.pravatar.cc/32')]"></div>
-          <div className="text-slate-700 text-lg font-bold">Joe Smith</div>
+          <div className="text-lg font-bold text-gray-700">Sourav Kumar</div>
         </div>
         <div className="flex items-center space-x-8">
-          <div className="text-neutral-500 text-xs">2 hours ago</div>
+          <div className="text-xs text-gray-500">2 hours ago</div>
         </div>
       </div>
 
       <div className="mt-4 mb-6">
-        <div className="mb-3 text-xl font-bold">{post.title}</div>
-        <div className="text-neutral-600 text-sm">{post.description}</div>
+        <div className="mb-3 text-xl font-bold text-gray-700">{post.title}</div>
+        <div className=" text-sm text-gray-500">{post.description}</div>
       </div>
       <div>
         <div className="text-slate-500 flex items-center justify-between">
           <div className="flex space-x-4 md:space-x-8">
-            <div className="transition hover:text-slate-600 flex cursor-pointer items-center">
+            <div className="transition flex cursor-pointer items-center text-gray-600 hover:text-orange-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="mr-1.5 h-5 w-5"
@@ -37,7 +36,7 @@ const Post = ({ post }) => (
               </svg>
               <span>125</span>
             </div>
-            <div className="transition hover:text-slate-600 flex cursor-pointer items-center">
+            <div className="transition flex cursor-pointer items-center text-gray-600 hover:text-orange-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="mr-1.5 h-5 w-5"
