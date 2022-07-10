@@ -5,7 +5,7 @@ import Container from "components/Container";
 import PageLoader from "components/PageLoader";
 import Post from "components/Post";
 
-const Dashboard = () => {
+const Dashboard = ({ history }) => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -23,6 +23,10 @@ const Dashboard = () => {
   useEffect(() => {
     fetchPosts();
   }, []);
+
+  const showPost = slug => {
+    history.push(`/posts/${slug}/show`);
+  };
 
   if (loading) {
     return (
@@ -45,7 +49,7 @@ const Dashboard = () => {
   return (
     <Container className="mb-10">
       {posts.map(post => (
-        <Post key={post.id} post={post} />
+        <Post key={post.id} post={post} showPost={showPost} />
       ))}
     </Container>
   );

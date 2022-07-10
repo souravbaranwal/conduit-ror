@@ -8,6 +8,7 @@ import { initializeLogger } from "common/logger";
 import Dashboard from "components/Dashboard";
 import PageLoader from "components/PageLoader";
 import CreatePost from "components/Posts/CreatePost";
+import ShowPost from "components/Posts/ShowPost";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ const App = () => {
         <Route exact path="/about" render={() => <div>About</div>} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/posts/create" component={CreatePost} />
+        <Route exact path="/posts/:slug/show" component={ShowPost} />
       </Switch>
     </Router>
   );

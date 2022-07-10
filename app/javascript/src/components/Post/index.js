@@ -1,19 +1,34 @@
 import React from "react";
 
-const Post = ({ post }) => (
+const Post = ({ post, showPost, canEdit }) => (
   <div className="mb-5 flex items-center justify-center">
-    <div className="border w-9/12 rounded-xl bg-white p-5 shadow-md hover:bg-orange-100">
+    <div className="border w-9/12 rounded-xl bg-white p-5 shadow-md">
       <div className="border-b flex w-full items-center justify-between pb-3">
         <div className="flex items-center space-x-3">
           <div className="text-lg font-bold text-gray-700">Sourav Kumar</div>
         </div>
         <div className="flex items-center space-x-8">
           <div className="text-xs text-gray-500">2 hours ago</div>
+          {canEdit && (
+            <i
+              className="transition ri-edit-line text-l cursor-pointer
+            text-center
+             text-gray-600 duration-300 ease-in-out hover:text-orange-400"
+              onClick={() => {}}
+            ></i>
+          )}
         </div>
       </div>
 
       <div className="mt-4 mb-6">
-        <div className="mb-3 text-xl font-bold text-gray-700">{post.title}</div>
+        <div
+          onClick={() => {
+            showPost && showPost(post.slug);
+          }}
+          className="mb-3 cursor-pointer text-xl font-bold text-gray-700 hover:text-orange-400"
+        >
+          {post.title}
+        </div>
         <div className=" text-sm text-gray-500">{post.description}</div>
       </div>
       <div>
