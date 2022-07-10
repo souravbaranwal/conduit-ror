@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import postsApi from "apis/posts";
+import Button from "components/Button";
 import Container from "components/Container";
 import PageLoader from "components/PageLoader";
 
@@ -11,6 +12,7 @@ import Post from "../Post";
 const ShowPost = () => {
   const { slug } = useParams();
   const [postDetails, setPostDetails] = useState([]);
+  const [comment, setComment] = useState("");
   const [pageLoading, setPageLoading] = useState(true);
 
   const fetchPostDetails = async () => {
@@ -34,9 +36,30 @@ const ShowPost = () => {
 
   return (
     <Container>
-      <h1 className="text-bb-gray border-b border-bb-gray mt-3 mb-3 pb-3 pl-3 text-lg leading-5">
-        <Post post={postDetails} canEdit={true} />
-      </h1>
+      <Post post={postDetails} canEdit={true} />
+
+      <div className="mb-5 flex items-center justify-center">
+        <form onSubmit={() => {}} className="mb-16 w-9/12 ">
+          <div className="sm:grid sm:grid-cols-1 sm:items-start sm:gap-1">
+            <label
+              className="block text-sm font-medium
+            text-nitro-gray-800 sm:mt-px sm:pt-2"
+            >
+              Comment
+            </label>
+            <textarea
+              placeholder="Ask a question or post an update"
+              rows={3}
+              className="border focus:ring-bb-purple block  flex-1 resize-none
+            rounded-md border-bb-border p-2 text-bb-gray-600
+            shadow-sm focus:border-bb-purple sm:text-sm"
+              onChange={e => setComment(e.target.value)}
+              value={comment}
+            ></textarea>
+          </div>
+          <Button type="submit" buttonText="Comment" />
+        </form>
+      </div>
     </Container>
   );
 };
