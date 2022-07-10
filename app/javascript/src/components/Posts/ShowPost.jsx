@@ -48,7 +48,7 @@ const ShowPost = () => {
               Comment
             </label>
             <textarea
-              placeholder="Ask a question or post an update"
+              placeholder="Add a comment"
               rows={3}
               className="border focus:ring-bb-purple block  flex-1 resize-none
             rounded-md border-bb-border p-2 text-bb-gray-600
