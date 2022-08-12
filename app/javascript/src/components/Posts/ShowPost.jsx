@@ -39,6 +39,22 @@ const ShowPost = () => {
       <Post post={postDetails} canEdit={true} />
 
       <div className="mb-5 flex items-center justify-center">
+        <div className="border w-9/12 rounded-xl bg-white p-4 shadow-md">
+          <div className=" text-sm text-gray-500">comment one</div>
+        </div>
+      </div>
+      <div className="mb-5 flex items-center justify-center">
+        <div className="border w-9/12 rounded-xl bg-white p-4 shadow-md">
+          <div className=" text-sm text-gray-500">comment two</div>
+        </div>
+      </div>
+      <div className="mb-5 flex items-center justify-center">
+        <div className="border w-9/12 rounded-xl bg-white p-4 shadow-md">
+          <div className=" text-sm text-gray-500">comment three</div>
+        </div>
+      </div>
+
+      <div className="mb-5 flex items-center justify-center">
         <form onSubmit={() => {}} className="mb-16 w-9/12 ">
           <div className="sm:grid sm:grid-cols-1 sm:items-start sm:gap-1">
             <label

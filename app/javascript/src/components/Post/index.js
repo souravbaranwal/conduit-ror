@@ -34,7 +34,7 @@ const Post = ({ post, showPost, canEdit }) => (
       <div>
         <div className="text-slate-500 flex items-center justify-between">
           <div className="flex space-x-4 md:space-x-8">
-            <div className="transition flex cursor-pointer items-center text-gray-600 hover:text-orange-400">
+            <div className="transition flex items-center text-gray-600 hover:text-orange-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="mr-1.5 h-5 w-5"
